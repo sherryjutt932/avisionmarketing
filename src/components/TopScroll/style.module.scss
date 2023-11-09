@@ -1,0 +1,10 @@
+.topScroll{
+    height: 2px;
+    position: fixed;
+    background-color: #EB5939;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 0px 2px 2px 0px;
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1.0) 0s;
+}

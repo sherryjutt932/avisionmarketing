@@ -1,0 +1,113 @@
+.container {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--dark1);
+  color: var(--light1);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: hidden;
+  position: relative;
+  border-top: 1px solid var(--colorMain);
+
+  .blobS {
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 400px;
+    filter: blur(150px);
+    background-color: var(--colorMain);
+    border-radius: 50%;
+    animation: blob 3s ease infinite;
+  }
+
+  .heading{
+    padding: var(--MPad) var(--BPad);
+    h1{
+      margin: auto;
+      text-transform: capitalize;
+      letter-spacing: -0.02em;
+      font-size: 7rem;
+      font-weight: bolder;
+      line-height: 1;
+      font-family: var(--mainFont);
+      text-align: center;
+      span{
+        color: var(--colorMain);
+      }
+    }
+
+    .btnwrap{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      gap: var(--SPad);
+    }
+    .btnText{
+      display: inline;
+      width: fit-content;
+      padding: 5px 20px;
+      border-radius: 100px;
+      border: 1px solid var(--gray-700);
+    }
+  }
+  .wrapper {
+    width: 80%;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap:2px;
+    .spacer{
+      width: 100px;
+    }
+    .iconCol{
+      display: flex;
+      flex-direction: column;
+      padding: var(--SPad);
+      gap: var(--SPad);
+
+      background: linear-gradient(0deg, #00000060, transparent);
+      
+      z-index: 1;
+      .icon{
+        width: 74px;
+        height: auto;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: var(--BRS);
+
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(7, 9, 14, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        
+        &:hover{
+          border: 1px solid rgba(255, 255, 255, 0.225);
+          transition: all .3s ease;
+        }
+        
+        &:hover svg{
+          width: 58px;
+          height: 58px;
+          transition: all .5s  cubic-bezier(0.25, 0.1, 0.25, 1.0);
+        }
+
+      }
+
+      $columns: 4;
+
+      @for $i from 1 through $columns {
+          .icon:nth-child(#{$i}){
+              opacity: ((.7) + (.3 / $i));
+          }
+      }
+    }
+  }
+}
+

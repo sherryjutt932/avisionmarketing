@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--MPad);
+
+  .wrapper{
+    position: relative;
+    overflow: hidden;
+    a,button{
+      display: flex;
+      text-decoration: none;
+      color: var(--light1);
+      font-size: 0.9rem;
+      background:none;
+      border: none;
+      cursor: pointer;
+
+      &:nth-child(2){
+        position: absolute;
+        left: 0%;
+        top: 0%;
+      }
+
+      span{
+        pointer-events: none;
+      }
+    }
+  }
+  
+}
+ 

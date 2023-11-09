@@ -1,0 +1,214 @@
+.gallery {
+  display: flex;
+  min-height: 180vh;
+  width: 100%;
+  // background-color: var(--dark1);
+  position: relative;
+
+}
+
+
+
+.left {
+  width: 50%;
+
+  .Heading {
+    color: #fff;
+    display: block;
+    display: flex;
+    align-items: flex-end;
+    padding: var(--BPad);
+
+    h1{
+      text-transform: capitalize;
+      letter-spacing: -0.02em;
+      font-size: 7rem;
+      font-weight: bolder;
+      line-height: 1;
+      font-family: var(--mainFont);
+      animation: 0.5s projH ease forwards;
+      span{
+        color: var(--colorMain);
+      }
+
+      @keyframes projH {
+        0%{
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        100%{
+          opacity: 10;
+          transform: translateY(0px);
+        }
+      }
+    }
+  }
+  
+
+  .detailsWrapper {
+    width: 100%;
+    position: relative;
+    padding-left: var(--BPad);
+
+    .details {
+      // position: absolute;
+      width: 100%;
+      padding: var(--BPad) 0;
+      padding-right: 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      // background-color: #000;
+      border-top:  1px dashed var(--dark3);
+
+      .year{
+        grid-area: year;
+        color: var(--colorMain);
+        font-size: 0.9rem;
+      }
+
+      .headline {
+        font-size: 3rem;
+        font-family: var(--mainFont);
+        line-height: 100%;
+        padding: 1rem 0;
+        color: var(--light1);
+      }
+
+      .text {
+        color: var(--gray-700);
+      }
+
+      ul{
+        color: var(--gray-700);
+        list-style: none;
+        padding-top: var(--MPad);
+
+        li{
+          padding: 4px 0;
+          color: var(--gray-700);
+          letter-spacing: 0.1ch;
+  
+          &:before {
+            content: '✓';
+            margin-right: var(--SPad);
+            color: #75ff3f;
+          }
+        }
+      }
+
+      .iconRow{
+        display: flex;
+        padding-top: var(--SPad);
+        gap: var(--SPad);
+        background: linear-gradient(0deg, #00000060, transparent);
+        z-index: 1;
+
+        .icon{
+          width: 40px;
+          height: 40px;
+          aspect-ratio: 1/1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+  
+          backdrop-filter: blur(16px) saturate(180%);
+          -webkit-backdrop-filter: blur(16px) saturate(180%);
+          background-color: rgba(7, 9, 14, 0.55);
+          border: 1px solid rgba(255, 255, 255, 0.125);
+          
+          svg{
+            width: 30px !important;
+            height: 30px !important;
+          }
+
+          &:hover{
+            border: 1px solid rgba(255, 255, 255, 0.225);
+            transition: all .3s ease;
+          }
+          
+          &:hover svg{
+            width: 32px !important;
+            height: 32px !important;
+            transition: all .5s  cubic-bezier(0.25, 0.1, 0.25, 1.0);
+          }
+  
+        }
+  
+      }
+    }
+  }
+}
+
+@keyframes blob {
+  0%, 100%{
+      background-color: #EB5939;
+  height: 400px;
+  transform: rotate(0deg);
+}
+
+  50%{
+      background-color: #ff7758;
+  height: 500px;
+transform: rotate(190deg);
+  }
+}
+
+.right {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  
+  .blobS {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    width: 400px;
+    height: 400px;
+    filter: blur(150px);
+    background-color: var(--colorMain);
+    border-radius: 50%;
+    animation: blob 3s ease infinite;
+  }
+  .photos {
+    width: 100%;
+    height: 100%;
+    gap: 10vh;
+    align-items: center;
+    justify-content: center;
+
+    .photo {
+      border-radius: 24px 24px 14px 14px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: auto;
+      aspect-ratio: 4/3;
+      background-size: 115%;
+      background-position: center center;
+
+      &[data-num="0"] {
+        top: 70%;
+        background-image: url("../../assets/images/PW1.png");
+      }
+      &[data-num="1"] {
+        top: 230%;
+        background-image: url("../../assets/images/PW3.png");
+      }
+      &[data-num="2"] {
+        top: 250%;
+        background-image: url("../../assets/images/PW2.png");
+      }
+      &[data-num="3"] {
+        top: 270%;
+        background-image: url("../../assets/images/PW4.png");
+      }
+    }
+  }
+
+}

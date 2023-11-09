@@ -1,0 +1,162 @@
+@import url('@/assets/css/clash-display.css');
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+:root {
+  --BPad: 4rem;
+  --MPad: 2rem;
+  --SPad: 1rem;
+  --Pad: 0.5rem;
+
+  --BRB: 24px;
+  --BRM: 16px;
+  --BRS: 10px;
+  --BR: 6px;
+
+  --dark1:#000;
+  --dark2:#090909;
+  --dark3:#333;
+
+  --gray-100: hsla(0,0%,95%,1);
+  --gray-200: hsla(0,0%,92%,1);
+  --gray-300: hsla(0,0%,90%,1);
+  --gray-400: hsla(0,0%,92%,1);
+  --gray-500: hsla(0,0%,79%,1);
+  --gray-600: hsla(0,0%,66%,1);
+  --gray-700: hsla(0,0%,56%,1);
+  --gray-800: hsla(0,0%,49%,1);
+  --gray-900: hsla(0,0%,40%,1);
+  --gray-1000:hsla(0,0%,9%,1);
+
+  
+  --light1:#fff;
+  --light2:#d9dcdf;
+  
+  --colorMain: #ec4e39;
+  /* --colorMain: #d5ff3f; */
+
+  --colorMainD: #a42918;
+  --colorMainL: #ff7b6a;
+  
+  /* --colorSecondary: #b7ab98; */
+  --colorSecondary: #fcfcfc;
+  --colorSecondaryD: #a2947d;
+
+  --mainFont: "ClashDisplay-Bold";
+  --mainFontSB: "ClashDisplay-SemiBold";
+}
+
+#imgseq-canvas {
+  transform: translateY(12vh);
+  height: 100vh;
+  width: 100%; 
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#responsive-canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+.anim{
+  position:fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 50;
+  animation: anim 1s forwards;
+  clip-path: circle(100% at 50% 50%);
+}
+.anim2{
+  position:fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 49;
+  opacity: .8;
+  animation: anim 1s forwards;
+  clip-path: circle(100% at 50% 50%);
+  animation-delay: 0ms;
+}
+
+@keyframes anim {
+  0%{
+    clip-path: circle(100% at 50% 50%);
+  }
+  100%{
+    clip-path: circle(0% at 50% 50%);
+
+  }
+}
+
+body{
+  margin: 0px;
+  background-color: #fff;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+main{
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 
+body::-webkit-scrollbar {
+  display: none;
+} */
+
+
+/* width */
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background-color: var(--colorMain);
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--colorMainD); 
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}

@@ -1,0 +1,219 @@
+.Hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #d9dcdf;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    // width: 100%;
+    // height: 100%;
+    // background: linear-gradient(0deg, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 1%, rgba(0,0,0,0) 10%);
+
+    z-index: 1;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #000, #eb5939, #000);
+  }
+
+  nav{
+    position: fixed;
+    width: 100%;
+    height: 64px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    mix-blend-mode: difference;
+    background: linear-gradient(0deg, transparent, #000);
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  font-weight: 800;
+  font-size: 2rem;
+  // color: var(--dark1);
+  color: var(--colorSecondary);
+  transition: 0.3;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+
+}
+
+.SocialIcons {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--light1);
+  z-index: 5;
+  gap: var(--SPad);
+  .Icon{
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    transition: all .3s;
+    opacity: .5;
+    &:hover{
+      opacity: 1;
+      transform: scale(120%);
+    }
+      a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+.blobS {
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  filter: blur(150px);
+  background-color: var(--colorMain);
+  border-radius: 50%;
+  animation: blob 3s ease infinite;
+}
+
+@keyframes blob {
+  0%, 100%{
+      background-color: #EB5939;
+  height: 400px;
+  }
+
+  50%{
+      background-color: #ff7758;
+  height: 420px;
+  }
+}
+
+// @font-face {
+//   font-family: "MangoGrotesque-SB";
+//   src: url("../../assets/fonts/MangoGrotesque-SemiBold.woff2");
+// }
+
+.Name {
+  font-family: var(--mainFont);
+  // margin-top: calc(var(--BPad) * 2);
+  color: var(--dark2);
+  color: var(--light1);
+  font-size: 9vw;
+  letter-spacing: -0ch;
+  cursor: default;
+  user-select: none;
+  height:80%;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  .NameW {
+    height:fit-content;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .NameChar {
+      margin: 0;
+    }
+  }
+}
+
+.nav {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  padding-top: var(--Pad);
+
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-between;
+  // text-align: right;
+  // gap: var(--MPad);
+  // border-radius: var(--BRS);
+  // a {
+  //   display: block;
+  //   border-radius: var(--BR);
+  //   text-decoration: none;
+  //   color: var(--light1);
+  //   font-size: 0.9rem;
+  //   transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+  //   &:focus {
+  //     // background-color: var(--dark2);
+  //     // color: var(--light1);
+  //     color: var(--colorMain);
+  //   }
+  //   &:hover {
+  //     // background-color: var(--gray-100);
+  //     // color: var(--dark2);
+  //     color: var(--colorMain);
+  //   }
+  // }
+}
+
+.resume {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  width: 100px;
+  display: flex;
+  padding: var(--Pad);
+  button {
+    transform: rotate(-90deg) translate(90%, -60%);
+    transform-origin: bottom right;
+    background-color: transparent;
+    letter-spacing: 0.2ch;
+    border: none;
+    display: flex;
+    align-items: center;
+    outline: none;
+    color: var(--colorSecondary);
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    cursor: pointer;
+    position: relative;
+    opacity: .5;
+    &:hover{
+      opacity: 1;
+    }
+    &::after{
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 6px);
+        height: 2px;
+        width: 0px;
+        border-radius: 5px;
+        transform: translate(0%,-50%);
+        background-color: var(--colorSecondary);
+        transition: width .5s ease;
+      }
+      &:hover::after{
+        // color: var(--colorSecondaryD);
+        background-color: var(--colorMain);
+        width: 20px;
+    }
+    span {
+      color: var(--colorMain);
+      font-size: 1.5rem;
+      margin-right: 3px;
+    }
+  }
+}

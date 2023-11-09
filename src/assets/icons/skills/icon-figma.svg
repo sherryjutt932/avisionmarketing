@@ -1,0 +1,11 @@
+<svg width="36" height="54" viewBox="0 0 36 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon-figma">
+<g id="Group">
+<path id="Vector" d="M27 36C31.9706 36 36 31.9706 36 27C36 22.0294 31.9706 18 27 18C22.0294 18 18 22.0294 18 27C18 31.9706 22.0294 36 27 36Z" fill="#19BCFE"/>
+<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M9 54C13.9706 54 18 49.9706 18 45C18 43.6431 18 40.6431 18 36C13.9568 36 10.9568 36 9 36C4.02944 36 0 40.0294 0 45C0 49.9706 4.02944 54 9 54Z" fill="#09CF83"/>
+<path id="Vector_3" fill-rule="evenodd" clip-rule="evenodd" d="M9 36H18V18C13.6569 18 10.6569 18 9 18C4.02944 18 0 22.0294 0 27C0 31.9706 4.02944 36 9 36Z" fill="#A259FF"/>
+<path id="Vector_4" fill-rule="evenodd" clip-rule="evenodd" d="M9 18H18V0C13.6569 0 10.6569 0 9 0C4.02944 0 0 4.02944 0 9C0 13.9706 4.02944 18 9 18Z" fill="#F24E1E"/>
+<path id="Vector_5" fill-rule="evenodd" clip-rule="evenodd" d="M27 18H18V0H27C31.9706 0 36 4.02944 36 9C36 13.9706 31.9706 18 27 18Z" fill="#FF7262"/>
+</g>
+</g>
+</svg>

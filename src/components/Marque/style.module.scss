@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  background-color: var(--dark2);
+  margin-top: var(--BPad);
+  .wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    p{
+      padding: var(--BPad);
+      word-spacing: .5ch;
+      text-transform: capitalize;
+      font-size: 5rem;
+      color: var(--colorMain);
+      font-family: var(--mainFontSB);
+      white-space: nowrap;
+    }
+    span{
+      font-size: 3rem;
+      color: var(--colorMain);
+      font-family: var(--mainFontSB);
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+}
+ 
