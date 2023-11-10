@@ -97,7 +97,7 @@ const ImageCanvas = () => {
   
       render();
 
-      console.log(frameIndex);
+      // console.log(frameIndex);
   
       return () => cancelAnimationFrame(requestId);
     }, [frameIndex, images]);
