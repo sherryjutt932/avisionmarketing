@@ -6,7 +6,7 @@ function getCurrentFrame(index) {
 
 
 const ImageCanvas = () => {
-    const numFrames = 239;
+    const numFrames = 150;
     const multiplier = 1.3;
     const canvasRef = useRef(null);
     const [images, setImages] = useState([]);
@@ -59,7 +59,7 @@ const ImageCanvas = () => {
     }, []);
   
     const handleScroll = () => {
-      const scrollFraction = window.scrollY / (window.innerHeight);
+      const scrollFraction = (window.scrollY/2) / (window.innerHeight);
       const index = Math.min(
         numFrames - 1,
         Math.ceil(scrollFraction * numFrames)
@@ -96,6 +96,8 @@ const ImageCanvas = () => {
       };
   
       render();
+
+      console.log(frameIndex);
   
       return () => cancelAnimationFrame(requestId);
     }, [frameIndex, images]);
