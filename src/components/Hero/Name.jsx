@@ -31,6 +31,7 @@ export default function Name() {
       y: 0,
       duration:2,
       stagger: 0.1,
+      delay:6,
       ease: "power3.out", // Easing function (you can choose a different one)
     });
   }, []);

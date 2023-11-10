@@ -1,14 +1,13 @@
 import React, { useRef, useEffect, useState } from 'react';
 
 function getCurrentFrame(index) {
-  return `./imgseq/${index.toString().padStart(3, '0')}.png`;
+  return `./hexa_imagesequence/${index.toString().padStart(3, '0')}.png`;
 }
 
-// ... (previous imports and functions)
 
 const ImageCanvas = () => {
-    const numFrames = 187;
-  
+    const numFrames = 239;
+    const multiplier = 1.3;
     const canvasRef = useRef(null);
     const [images, setImages] = useState([]);
     const [frameIndex, setFrameIndex] = useState(2);
@@ -59,34 +58,72 @@ const ImageCanvas = () => {
       };
     }, []);
   
+    const handleScroll = () => {
+      const scrollFraction = window.scrollY / (window.innerHeight);
+      const index = Math.min(
+        numFrames - 1,
+        Math.ceil(scrollFraction * numFrames)
+      );
+    
+      if (index <= 0 || index > numFrames) {
+        return;
+      }
+    
+      setFrameIndex(index);
+    };
+
     useEffect(() => {
-      if (!canvasRef.current || images.length === 0) {
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    useEffect(() => {
+      if (!canvasRef.current || images.length < 1) {
         return;
       }
   
-      const context = canvasRef.current.getContext('2d');
+      const context = canvasRef.current.getContext("2d");
       let requestId;
   
+      // Calculate the position to center the image within the canvas
+    const centerX = (context.canvas.width - images[frameIndex].width* multiplier) / 2;
+    const centerY = (context.canvas.height - images[frameIndex].height* multiplier) * 1;
+
       const render = () => {
         context.clearRect(0, 0, context.canvas.width, context.canvas.height);
-        context.drawImage(images[frameIndex], 0, 0);
-  
-        // Increment the frame index for the next rendering cycle
-        setFrameIndex((prevFrameIndex) => (prevFrameIndex + 1) % numFrames);
+        context.drawImage(images[frameIndex],  centerX, centerY,images[frameIndex].width * multiplier, images[frameIndex].height * multiplier);
+        requestId = requestAnimationFrame(render);
       };
   
-      // Ensure that frameIndex is included as a dependency
-      requestId = requestAnimationFrame(render);
+      render();
   
-      return () => {
-        // Cleanup logic for the rendering loop when the component is unmounted
-        cancelAnimationFrame(requestId);
-      };
-    }, [frameIndex, images, numFrames]);
+      return () => cancelAnimationFrame(requestId);
+    }, [frameIndex, images]);
+
+    // useEffect(() => {
+    //   if (!canvasRef.current || images.length === 0) {
+    //     return;
+    //   }
   
-    useEffect(() => {
-      console.log('Images loaded:', images);
-    }, [images]);
+    //   const context = canvasRef.current.getContext('2d');
+    //   let requestId;
+  
+    //   const render = () => {
+    //     context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+    //     context.drawImage(images[frameIndex], 0, 0);
+  
+    //     // Increment the frame index for the next rendering cycle
+    //     setFrameIndex((prevFrameIndex) => (prevFrameIndex + 1) % numFrames);
+    //   };
+  
+    //   // Ensure that frameIndex is included as a dependency
+    //   requestId = requestAnimationFrame(render);
+  
+    //   return () => {
+    //     // Cleanup logic for the rendering loop when the component is unmounted
+    //     cancelAnimationFrame(requestId);
+    //   };
+    // }, [frameIndex, images, numFrames]);
   
     return (
       <div

@@ -1,9 +1,8 @@
   @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 .loader {
-  
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,13 +10,16 @@
     background-color: #000;
     color:#fff;
     overflow: hidden;
-    z-index: 2;
+  position: fixed;
+    z-index: 200;
   
     &__wrapper {
       position: relative;
       height: 100%;
       width: 100%;
-      position: fixed;
+      position: absolute;
+      top: 0;
+  left: 0;
       inset: 0;
       overflow: hidden;
       background-color: #000;

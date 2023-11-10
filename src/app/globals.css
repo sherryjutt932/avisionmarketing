@@ -66,42 +66,6 @@
   display: block;
 }
 
-
-.anim{
-  position:fixed;
-  top: 0%;
-  left: 0%;
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
-  z-index: 50;
-  animation: anim 1s forwards;
-  clip-path: circle(100% at 50% 50%);
-}
-.anim2{
-  position:fixed;
-  top: 0%;
-  left: 0%;
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
-  z-index: 49;
-  opacity: .8;
-  animation: anim 1s forwards;
-  clip-path: circle(100% at 50% 50%);
-  animation-delay: 0ms;
-}
-
-@keyframes anim {
-  0%{
-    clip-path: circle(100% at 50% 50%);
-  }
-  100%{
-    clip-path: circle(0% at 50% 50%);
-
-  }
-}
-
 body{
   margin: 0px;
   background-color: #fff;

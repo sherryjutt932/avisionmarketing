@@ -54,20 +54,12 @@ export default function App() {
 
   return (
     <>
-      {!introComplete && <Loader onComplete={handleIntroComplete} />}
-
-      {introComplete && (
-        // Render the rest of your components
-        <>
-          <div className="anim" ref={anim}></div>
-          <div className="anim" ref={anim}></div>
-          <Hero />
-          <Services />
-          <Quote />
-          <Skills />
-          <Footer />
-        </>
-      )}
+      <Loader onComplete={handleIntroComplete} />
+      <Hero />
+      <Services />
+      <Quote />
+      <Skills />
+      <Footer />
     </>
   );
 }

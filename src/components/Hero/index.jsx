@@ -22,6 +22,8 @@ export default function index() {
   const section = useRef();
   const name = useRef();
   const intro = useRef();
+  const blobref = useRef();
+  var delayval = 6;
   const navItems = [
     {
       name: "Services",
@@ -46,7 +48,7 @@ export default function index() {
     var tl = gsap.timeline();
     tl.to(name.current, {
       y: 0,
-      delay:1,
+      delay:delayval,
       scale: 1.3,
       scrub: 1,
       ease: "power3", // Easing function (you can choose a different one)
@@ -60,10 +62,12 @@ export default function index() {
       scrub: true,
     });
 
+    gsap.set(blobref.current, { opacity: 0 });
     gsap.set(intro.current.children, { y: -100, opacity: 0 });
     gsap.set([intro.current.children[1], intro.current.children[2]], {
       y: 100,
       opacity: 0,
+      delay:5,
     });
 
     var introtl = gsap.timeline();
@@ -71,9 +75,15 @@ export default function index() {
       y: 0,
       opacity: 1,
       duration: 2,
-      delay:1,
+      delay:delayval,
       ease: "power3", // Easing function (you can choose a different one)
-    });
+    },"a")
+    .to(blobref.current,
+    {
+      duration: 1,
+      delay:delayval+1,
+      opacity: 1,
+    },"a");
   }, []);
 
   const handleDownload = () => {
@@ -158,7 +168,9 @@ export default function index() {
 
       <div style={{ zIndex: 1 }}>
         <div className={styles.blobS}></div>
+        <div ref={blobref}>
         <Blob />
+        </div>
       </div>
     </section>
   );
