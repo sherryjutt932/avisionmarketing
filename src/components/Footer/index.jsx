@@ -19,20 +19,12 @@ export default function Footer(props) {
       url: "https://www.instagram.com/avisionmarketing/",
     },
     {
-      name: "Github",
-      url: "https://github.com/sherryjutt932",
-    },
-    {
-      name: "Codepen",
-      url: "https://codepen.io/sherryjutt932",
-    },
-    {
       name: "Instagram",
-      url: "https://www.instagram.com/sherry_jutt42/",
+      url: "https://www.instagram.com/avisionmarketing/",
     },
     {
       name: "Facebook",
-      url: "https://www.facebook.com/profile.php?id=100009704040257",
+      url: "https://www.instagram.com/avisionmarketing/",
     },
   ];
 

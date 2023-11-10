@@ -129,18 +129,6 @@ export default function index() {
           <li className={styles.Icon}>
             <StickyIcon
               url={"https://www.instagram.com/avisionmarketing/"}
-              icon={<BiLogoGithub />}
-            />
-          </li>
-          <li className={styles.Icon}>
-            <StickyIcon
-              url={"https://www.instagram.com/avisionmarketing/"}
-              icon={<BiLogoCodepen />}
-            />
-          </li>
-          <li className={styles.Icon}>
-            <StickyIcon
-              url={"https://www.instagram.com/avisionmarketing/"}
               icon={<BiLogoInstagram />}
             />
           </li>
