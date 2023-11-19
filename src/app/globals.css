@@ -51,19 +51,22 @@
 }
 
 #imgseq-canvas {
-  transform: translateY(12vh);
-  height: 100vh;
-  width: 100%; 
+  width: max(560px,42%);
+  aspect-ratio: 1;
   position: absolute;
-  left: 0;
+  left: 50%;
+  display: flex;
+  align-items: end;
+  transform: translateX(-50%);
   bottom: 0;
 }
 
 #responsive-canvas {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1;
   object-fit: contain;
   display: block;
+  transform: translateY(38%);
 }
 
 body{

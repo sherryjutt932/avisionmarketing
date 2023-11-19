@@ -58,8 +58,8 @@ export default function Education(props) {
 
     ScrollTrigger.create({
       trigger: cont.current,
-      start: "top 50%",
-      end: "bottom 50%",
+      start: "top 40%",
+      end: "bottom 90%",
       animation: tl,
       scrub: true,
     });

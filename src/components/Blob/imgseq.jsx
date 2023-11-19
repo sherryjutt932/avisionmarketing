@@ -1,13 +1,13 @@
 import React, { useRef, useEffect, useState } from 'react';
 
 function getCurrentFrame(index) {
-  return `./hexa_imagesequence/${index.toString().padStart(3, '0')}.png`;
+  return `./chips/${index.toString().padStart(3, '0')}.png`;
 }
 
 
 const ImageCanvas = () => {
     const numFrames = 150;
-    const multiplier = 1.3;
+    const multiplier = 2;
     const canvasRef = useRef(null);
     const [images, setImages] = useState([]);
     const [frameIndex, setFrameIndex] = useState(2);
@@ -85,13 +85,15 @@ const ImageCanvas = () => {
       const context = canvasRef.current.getContext("2d");
       let requestId;
   
+      let Iwidth =context.canvas.width;
+      let Iheight = context.canvas.width;
       // Calculate the position to center the image within the canvas
-    const centerX = (context.canvas.width - images[frameIndex].width* multiplier) / 2;
-    const centerY = (context.canvas.height - images[frameIndex].height* multiplier) * 1;
+    const centerX = (context.canvas.width - Iwidth) / 2;
+    const centerY = 0;
 
       const render = () => {
         context.clearRect(0, 0, context.canvas.width, context.canvas.height);
-        context.drawImage(images[frameIndex],  centerX, centerY,images[frameIndex].width * multiplier, images[frameIndex].height * multiplier);
+        context.drawImage(images[frameIndex],centerX,centerY,Iwidth,Iheight);
         requestId = requestAnimationFrame(render);
       };
   

@@ -62,6 +62,9 @@
   color: var(--light1);
   z-index: 5;
   gap: var(--SPad);
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 5px;
   .Icon{
     font-size: 24px;
     width: 24px;
@@ -175,21 +178,23 @@
   display: flex;
   padding: var(--Pad);
   button {
-    transform: rotate(-90deg) translate(90%, -60%);
+    transform: rotate(-90deg) translate(96%, -106%);
     transform-origin: bottom right;
-    background-color: transparent;
     letter-spacing: 0.2ch;
     border: none;
     display: flex;
     align-items: center;
     outline: none;
-    color: var(--colorSecondary);
+    color: #ffffff50;
     transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
     text-transform: uppercase;
     font-size: 0.9rem;
     cursor: pointer;
     position: relative;
-    opacity: .5;
+    background-color: #000;
+        padding: 5px;
+        border-radius: 10px;
+
     &:hover{
       opacity: 1;
     }
@@ -202,8 +207,9 @@
         width: 0px;
         border-radius: 5px;
         transform: translate(0%,-50%);
-        background-color: var(--colorSecondary);
+        
         transition: width .5s ease;
+
       }
       &:hover::after{
         // color: var(--colorSecondaryD);

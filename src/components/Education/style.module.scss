@@ -10,6 +10,7 @@
       letter-spacing: -0.02em;
       font-size: 7rem;
       font-weight: bolder;
+      white-space: nowrap;
       line-height: 1;
       font-family: var(--mainFont);
       span{
@@ -63,6 +64,79 @@
         }
       }
 
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 100%;
+    background-color: var(--dark1);
+    padding: 20px 0;
+    color: var(--light1);
+    .heading{
+      padding: 20px;
+      h1{
+        padding-bottom: 10px;
+        text-transform: capitalize;
+        letter-spacing: -0.02em;
+        font-size: 3rem;
+        font-weight: bolder;
+        white-space: nowrap;
+        line-height: 1;
+        font-family: var(--mainFont);
+        span{
+          color: var(--colorMain);
+        }
+      }
+  
+      .btnText{
+        width: fit-content;
+        padding: 5px 20px;
+        border-radius: 100px;
+        border: 1px solid var(--gray-700);
+      }
+    }
+    .wrapper {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      padding-top: 2rem;
+      gap: 1rem;
+      padding-bottom: var(--BPad);
+      .Degree {
+        width: 100%;
+        border-top: 1px dashed var(--dark3);
+        border-bottom: 1px dashed var(--dark3);
+        padding: var(--SPad) 0;
+        display: grid;
+        grid-template-columns: 0.5fr 1.5fr 0.5fr;
+        grid-template-rows: 0.5fr 1.5fr 0.5fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "title title title"
+          "title title title"
+          "title title title";
+  
+        .year {
+          grid-area: year;
+          color: var(--colorMain);
+          opacity: .7;
+          font-size: 0.9rem;
+        }
+  
+        .title {
+          grid-area: title;
+          font-size: 1.5rem;
+          white-space: nowrap;
+          line-height: 120%;
+          font-family: var(--mainFont);
+          padding-left: 25px;
+        }
+  
+      }
     }
   }
 }
