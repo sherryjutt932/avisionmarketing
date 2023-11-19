@@ -51,20 +51,20 @@ export default function App() {
     
   // }, [])
   
-  useEffect(() => {
-    // Function to reload the page on resize
-    const handleResize = () => {
-      window.location.reload();
-    };
+  // useEffect(() => {
+  //   // Function to reload the page on resize
+  //   const handleResize = () => {
+  //     window.location.reload();
+  //   };
 
-    // Add event listener for resize
-    window.addEventListener('resize', handleResize);
+  //   // Add event listener for resize
+  //   window.addEventListener('resize', handleResize);
 
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  //   // Clean up the event listener when the component unmounts
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);
 
   return (
     <>
