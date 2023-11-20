@@ -223,3 +223,15 @@
     }
   }
 }
+
+
+.videoele{
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  object-fit: cover;
+}

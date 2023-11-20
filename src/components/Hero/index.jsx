@@ -157,7 +157,8 @@ export default function index() {
       <div style={{ zIndex: 1 }}>
         <div className={styles.blobS}></div>
         <div ref={blobref}>
-        <Blob />
+        {/* <Blob /> */}
+        <video className={styles.videoele} autoPlay={true} controls={false} muted={true} loop={true} src="./chips.mp4"></video>
         </div>
       </div>
     </section>
