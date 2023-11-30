@@ -55,13 +55,6 @@ function photoAnm(photo) {
           opacity:0.7
         },
         "b"
-      )
-      .to(
-        photo.current.children[2],
-        {
-          top: "150%",
-        },
-        "b"
       );
       
     return tl;

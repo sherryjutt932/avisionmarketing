@@ -53,7 +53,7 @@
     .details {
       // position: absolute;
       width: 100%;
-      padding: var(--BPad) 0;
+      padding: 170px 0;
       padding-right: 0;
       display: flex;
       justify-content: center;
@@ -101,7 +101,7 @@
         display: flex;
         padding-top: var(--SPad);
         gap: var(--SPad);
-        background: linear-gradient(0deg, #00000060, transparent);
+        background: none;
         z-index: 1;
 
         .icon{

@@ -38,18 +38,18 @@ export default function index() {
   
   const projects = [
     {
-      title: "Forensic Analysis",
-      description: "Create frontend and ML model to show result of Forensic Analysis with great accuracy.",
+      title: "Social Media Marketing",
+      description: "Instagram marketing in which we create and manage instagram post",
       year: "2023",
-      tasks: ["API fetching","ML Model","Live prediction", "Authentication"],
-      skills: ["html","css","js","react","python"]
+      tasks: ["Post","Account Management","Marketing"],
+      skills: ["ai","figma","ps"]
     },
     {
-      title: "Account Management System",
-      description: "Developed and Design Detailed Account Management System for Global Soft ERP which include Ledgers, Reports, Accounts and much more.",
+      title: "Social Media Marketing",
+      description: "Instagram marketing in which we create and manage instagram post",
       year: "2023",
-      tasks: ["Account Management","All Reports","Transaction Records", "Stock Management"],
-      skills: ["html","css","js","mvc","sql"]
+      tasks: ["Post","Account Management","Marketing"],
+      skills: ["ai","figma","ps"]
     }
   ];
 
