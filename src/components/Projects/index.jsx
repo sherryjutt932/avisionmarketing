@@ -3,8 +3,12 @@ import styles from "./style.module.scss";
 import { photoAnm, detailAnm } from "./animation.js";
 import Detail from "./Detail.jsx";
 import { gsap } from "gsap";
+import img1 from "../../assets/images/media1.png"
+import img2 from "../../assets/images/media2.png"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
+
 
 export default function index() {
   const gallery = useRef(null);
@@ -12,9 +16,9 @@ export default function index() {
   const details = useRef(null);
   const right = useRef(null);
   const photo = useRef(null);
+  const imgarray = [img1,img2]
 
   useLayoutEffect(() => {
-
     ScrollTrigger.create({
       trigger: gallery.current,
       start: "top top",
@@ -23,7 +27,7 @@ export default function index() {
       animation: photoAnm(photo),
       scrub: true,
     });
-    
+
     // ScrollTrigger.create({
     //   trigger: left.current,
     //   start: "top top",
@@ -32,25 +36,25 @@ export default function index() {
     //   animation: detailAnm(details),
     //   scrub: true,
     // });
-
   }, []);
 
-  
   const projects = [
     {
       title: "Social Media Marketing",
-      description: "Instagram marketing in which we create and manage instagram post",
+      description:
+        "Instagram marketing in which we create and manage instagram post",
       year: "2023",
-      tasks: ["Post","Account Management","Marketing"],
-      skills: ["ai","figma","ps"]
+      tasks: ["Post", "Account Management", "Marketing"],
+      skills: ["ai", "figma", "ps"],
     },
     {
       title: "Social Media Marketing",
-      description: "Instagram marketing in which we create and manage instagram post",
+      description:
+        "Instagram marketing in which we create and manage instagram post",
       year: "2023",
-      tasks: ["Post","Account Management","Marketing"],
-      skills: ["ai","figma","ps"]
-    }
+      tasks: ["Post", "Account Management", "Marketing"],
+      skills: ["ai", "figma", "ps"],
+    },
   ];
 
   return (
@@ -63,23 +67,29 @@ export default function index() {
             </h1>
           </div>
           <div ref={details} className={styles.detailsWrapper}>
-  
             {projects.map((item, i) => (
-                      <Detail key={i} data={item}
-                    />
-                    ))}
-
+              <Detail key={i} data={item} />
+            ))}
+          </div>
+          <div className={styles.mobile}>
+          {projects.map((item, i) => {
+              return(
+                <>
+                <Detail key={i} data={item} />
+                <Image src={imgarray[i]} alt="" key={i} className={styles.img}/>
+                </>
+              )
+            })}
           </div>
         </div>
 
         <div ref={right} className={styles.right}>
-      <div className={styles.blobS}></div>
+          <div className={styles.blobS}></div>
 
           <div ref={photo} className={styles.photos}>
-          {projects.map((item, i) => (
-                      <div data-num={i} key={i} className={styles.photo}></div>
-                    ))}
-            
+            {projects.map((item, i) => (
+              <div data-num={i} key={i} className={styles.photo}></div>
+            ))}
           </div>
         </div>
       </div>
