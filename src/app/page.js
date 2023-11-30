@@ -15,11 +15,8 @@ export const metadata = {
 export default function Home() {
   
   return (
-    <main className="main">
-     
-     <React.StrictMode>
+    <main className="main">     
       <App/>
-  </React.StrictMode>
     </main>
   );
 }
