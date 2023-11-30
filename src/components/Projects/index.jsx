@@ -50,21 +50,7 @@ export default function index() {
       year: "2023",
       tasks: ["Account Management","All Reports","Transaction Records", "Stock Management"],
       skills: ["html","css","js","mvc","sql"]
-    },
-    {
-      title: "Mockytails",
-      description: "A playfull and rich in color e-commerce website to sell mocktail cards having childrens as target audience.",
-      year: "2023",
-      tasks: ["E-commerce","Amazon Products","Hosting", "Designing"],
-      skills: ["html","css","js"]
-    },
-    {
-      title: "Trading Web UI",
-      description: "Create a UI for trading of stokes, bitcoins and NFTs. Give update on price and value in market.",
-      year: "2022",
-      tasks: ["Live Market Page","Landing Page","Trading Section"],
-      skills: ["figma","ai"]
-    },
+    }
   ];
 
   return (

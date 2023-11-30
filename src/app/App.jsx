@@ -17,6 +17,7 @@ import Skills from "@/components/Skills";
 import Quote from "@/components/Quote";
 import Footer from "@/components/Footer";
 import Services from "@/components/Education";
+import Projects from "@/components/Projects";
 
 export default function App() {
   const [loaderFinished, setLoaderFinished] = useState(false);
@@ -70,6 +71,7 @@ export default function App() {
     <>
       <Loader onComplete={handleIntroComplete} />
       <Hero />
+      <Projects />
       <Services />
       <Quote />
       <Skills />

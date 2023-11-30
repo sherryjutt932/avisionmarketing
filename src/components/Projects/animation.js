@@ -62,67 +62,8 @@ function photoAnm(photo) {
           top: "150%",
         },
         "b"
-      )
-      .to(
-        photo.current.children[2],
-        {
-          top: "56%",
-          backgroundSize: "100%",
-        backgroundPosition:"center center",
-        ease:"power2"
-        },
-        "c"
-      )
-      .to(
-        photo.current.children[1],
-        {
-          width: "77%",
-          opacity:0.7
-        },
-        "c"
-        )
-        .to(
-          photo.current.children[0],
-          {
-            width: "74%",
-            opacity:0.3
-        },
-        "c"
-      )
-      .to(
-        photo.current.children[3],
-        {
-          top: "60%",
-          backgroundSize: "100%",
-        backgroundPosition:"center center",
-        ease:"power2"
-        },
-        "d"
-      )
-      .to(
-        photo.current.children[2],
-        {
-          width: "77%",
-          opacity:0.7
-        },
-        "d"
-        )
-        .to(
-          photo.current.children[1],
-          {
-            width: "74%",
-            opacity:0.3
-        },
-        "d"
-      )
-      .to(
-        photo.current.children[0],
-        {
-          width: "72%",
-          opacity:0.1
-      },
-      "d"
-    );
+      );
+      
     return tl;
 }
 

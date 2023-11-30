@@ -2,7 +2,7 @@
   display: flex;
   min-height: 180vh;
   width: 100%;
-  // background-color: var(--dark1);
+  background-color: var(--dark1);
   position: relative;
 
 }
@@ -194,19 +194,19 @@ transform: rotate(190deg);
 
       &[data-num="0"] {
         top: 70%;
-        background-image: url("../../assets/images/PW1.png");
+        background-image: url("../../assets/images/media1.png");
       }
       &[data-num="1"] {
         top: 230%;
-        background-image: url("../../assets/images/PW3.png");
+        background-image: url("../../assets/images/media2.png");
       }
       &[data-num="2"] {
         top: 250%;
-        background-image: url("../../assets/images/PW2.png");
+        background-image: url("../../assets/images/media1.png");
       }
       &[data-num="3"] {
         top: 270%;
-        background-image: url("../../assets/images/PW4.png");
+        background-image: url("../../assets/images/media2.png");
       }
     }
   }
