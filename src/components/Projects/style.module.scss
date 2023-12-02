@@ -5,6 +5,10 @@
   background-color: var(--dark1);
   position: relative;
 
+  .mobile{
+    display: none;
+  }
+
 }
 
 
@@ -254,6 +258,7 @@ transform: rotate(190deg);
       }
     }
     .mobile {
+      display: block;
       padding-left: 20px;
       .details {
         // position: absolute;
